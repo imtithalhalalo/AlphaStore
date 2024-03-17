@@ -16,9 +16,17 @@ This project is a React application built with TypeScript, utilizing React Route
 - **Animated Notifications:** Integrate animated notifications to provide feedback to the user for cart actions.
 
 ## Examples
+
+## Cart
 ![Landing Page](https://github.com/imtithalhalalo/AlphaStore/blob/main/public/images/img1.png)
+
+## Landing Page
 ![Cart Page](https://github.com/imtithalhalalo/AlphaStore/blob/main/public/images/img2.png)
+
+## Filter Feature
 ![Filter](https://github.com/imtithalhalalo/AlphaStore/blob/main/public/images/filter.png)
+
+## Search Feature
 ![Search](https://github.com/imtithalhalalo/AlphaStore/blob/main/public/images/search.png)
 
 ## Installation
