@@ -1,0 +1,74 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "title": "Almond Butter Creamy",
+            "price": 50,
+            "imgUrl": "./public/images/1.jpeg",
+            "quantity": 1
+        },
+        {
+            "id": 2,
+            "title": "HazelNut Spread",
+            "price": 70,
+            "imgUrl": "./public/images/2.jpeg",
+            "quantity": 1
+        },
+        {
+            "id": 3,
+            "title": "Orange Juice",
+            "price": 65,
+            "imgUrl": "./public/images/3.jpeg",
+            "quantity": 1
+        },
+        {
+            "id": 4,
+            "title": "Hershey's Syrup",
+            "price": 40,
+            "imgUrl": "./public/images/4.jpeg",
+            "quantity": 1
+        },
+        {
+            "id": 5,
+            "title": "Silk Almond",
+            "price": 60,
+            "imgUrl": "./public/images/5.jpeg",
+            "quantity": 1
+        },
+        {
+            "id": 6,
+            "title": "Grapes tomatoes",
+            "price": 80,
+            "imgUrl": "./public/images/6.jpeg",
+            "quantity": 1
+        },
+        {
+            "id": 7,
+            "title": "Strawberries",
+            "price": 30,
+            "imgUrl": "./public/images/7.jpeg",
+            "quantity": 1
+        },
+        {
+            "id": 8,
+            "title": "Rasberries",
+            "price": 44,
+            "imgUrl": "./public/images/8.jpeg",
+            "quantity": 1
+        },
+        {
+            "id": 9,
+            "title": "Blueberries",
+            "price": 35,
+            "imgUrl": "./public/images/9.jpeg",
+            "quantity": 1
+        },
+        {
+            "id": 10,
+            "title": "Chocolate chips",
+            "price": 35,
+            "imgUrl": "./public/images/10.jpeg",
+            "quantity": 1
+        }
+    ]
+}
