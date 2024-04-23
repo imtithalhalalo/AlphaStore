@@ -102,7 +102,7 @@ const Cart = () => {
                             <h2 className="fw-bold fs-4 py-4">
                                 Cart Summary
                             </h2>
-                            <button className="btn btn-outline-info text-info ms-4 text-decoration-none align-self-center" onClick={() => dispatch(clearCart())}>
+                            <button className="btn btn-info text-white ms-4 text-decoration-none align-self-center" onClick={() => dispatch(clearCart())}>
                                 Clear Cart
                             </button>
                         </div>

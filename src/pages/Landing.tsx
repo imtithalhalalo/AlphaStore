@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useItemsQuery } from "../features/itemsAPi";
 import { Item } from "../interfaces/Item";
-import { FaCartPlus } from "react-icons/fa";
+import { FaCartArrowDown, FaCartPlus } from "react-icons/fa";
 import { useAppDispatch } from "../app/hooks";
 import { addToCart } from "../features/storeSlice";
 
@@ -9,6 +9,7 @@ const Landing = () => {
     const { data } = useItemsQuery();
     const [searchTerm, setSearchTerm] = useState('');
     const [keyFilter, setKeyFilter] = useState('default');
+    const [addingToCartItemId, setAddingToCartItemId] = useState(null);
 
     const dispatch = useAppDispatch();
 
@@ -34,6 +35,15 @@ const Landing = () => {
     };
 
     const items = sortedItems(filteredItems || data || []);
+
+    const handleAddToCart = (item: any) => {
+        setAddingToCartItemId(item.id); // Set the currently adding item ID
+
+        setTimeout(() => {
+            dispatch(addToCart(item));
+            setAddingToCartItemId(null); // Reset the currently adding item ID after adding to cart
+        }, 2000);
+    };
 
     return (
         <div className="container-lg py-4">
@@ -138,8 +148,22 @@ const Landing = () => {
                                     <h2 className="fs-4 my-2 fw-bold lead">
                                         {item.price} $
                                     </h2>
-                                    <button className="btn btn-info my-4 ms-2 text-decoration-none text-light " onClick={() => dispatch(addToCart(item))}>
-                                        <FaCartPlus className="me-2 fs-5" /> Add To Cart
+                                    <button
+                                        className="btn btn-info my-4 ms-2 text-decoration-none text-light"
+                                        onClick={() => handleAddToCart(item)}
+                                        disabled={addingToCartItemId === item.id} // Disable the button while this item is being added
+                                    >
+                                        {addingToCartItemId === item.id ? (
+                                            <>
+                                                <FaCartArrowDown className="me-2 fs-5" />
+                                                Adding to Cart...
+                                            </>
+                                        ) : (
+                                            <>
+                                                <FaCartPlus className="me-2 fs-5" />
+                                                Add To Cart
+                                            </>
+                                        )}
                                     </button>
                                 </div>
                                 
